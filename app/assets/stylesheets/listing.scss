@@ -1,5 +1,12 @@
-.test{
-  height: 100px;
-  width: 100px;
-  background-color: gray;
+.item_main{
+  height: 1000px;
+  width: 100%;
+  background-color: #f8f8f8;
+  .item_box{
+    height: 800px;
+    width: 700px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 40px 40px;
+  }
 }
