@@ -25,6 +25,8 @@
         .name_red
           必須
       .title_box
+        = form_with do |form| 
+          = form.text_field :keyword, placeholder: "○○文字以内", class: "name-input"
     .item_description
       .description_headline
         .name
@@ -32,42 +34,62 @@
         .name_red
           必須
       .description
+        = form_with do |form| 
+          = form.text_field :keyword, placeholder: "商品説明（○○文字以内）", class: "description-input"
     .item_category
       .category_headline
         .name
           カテゴリー
         .name_red
           必須
+      .category
+        = form_with do |form|
+          = form.select :status, [["日用品","1"],["化粧品","２"],["家電","３"]], prompt: "選択してください", class: "satatus"
     .item_brand
       .brand_headline
         .name
           ブランド
         .name_gray
           任意
+      .brand
+        = form_with do |form| 
+          = form.text_field :keyword, placeholder: "○○文字以内", class: "brand-input"
     .item_status
       .status_headline
         .name
           商品の状態
         .name_red
           必須
+      .status
+        = form_with do |form|
+          = form.select :status, [["新品","1"],["小さな傷、汚れあり","２"],["大きな傷、汚れあり","３"]], prompt: "選択してください", class: "satatus"
     .item_delivery
       .delivery_headline
         .name
           配送料の負担
         .name_red
           必須
+      .delivery
+        = form_with do |form|
+          = form.select :money, [["送料込み(出品者負担)","0"],["着払い(購入者負担)","1"]], prompt: "選択してください", class: "money"
     .item_area
       .area_headline
         .name
           発送元の地域
         .name_red
           必須
+      .area
+        = form_with do |form|
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name
     .item_day
       .day_headline
         .name
           発送までの日数
         .name_red
           必須
+      .day
+        = form_with do |form|
+          = form.select :day, [["1~2日で発送","1"],["2~3日で発送","2"],["4~7日で発送","3"]], prompt: "選択してください", class: "day"
     .item_price
       .price_headline
         .name
@@ -76,6 +98,8 @@
           必須
       .price_box
         .price
+          = form_with do |form| 
+            = form.text_field :keyword, placeholder: "0", class: "price-input"
         .price_text
           価格（￥○○〜○○円まで)
     .item_listing
