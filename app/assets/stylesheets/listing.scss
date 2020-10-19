@@ -1,0 +1,263 @@
+.item_main{
+  height: 1600px;
+  width: 100%;
+  background-color: #f8f8f8;
+  .item_box{
+    height: 1600px;
+    width: 700px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 40px 40px;
+    .item_image{
+    height: 50px;
+    .image_headline{
+      height: 20px;
+      width: 200px;
+      justify-content: space-around;
+      font-weight: bold;
+      .image_title{
+        font-size: 15px;
+      }
+      .image_red{
+        font-size: 13px;
+        width: 40px;
+        height: 20px;
+        color: red;
+        text-align: center;
+      }
+    }
+    }
+    .item_title{
+      height: 100px;
+      margin-top: 50px;
+      .name_headline{
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+      .name-input{
+        margin-top: 20px;
+        width: 100%;
+        border: 1px solid #d3d3d3;
+        padding: 0 5px;
+      }
+    }
+    .item_description{
+      height: 230px;
+      .description_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        font-weight: bold;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+      .description-input{
+        margin-top: 20px;
+        width: 100%;
+        height: 150px;
+        border: 1px solid #d3d3d3;
+      }
+    }
+    .item_category{
+      height: 120px;
+      .category_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+    .item_brand{
+      height: 100px;
+      font-weight: bold;
+      display: flex;
+    }
+    .item_status{
+      height: 120px;
+      .status_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+    .item_delivery{
+      height: 120px;
+      .delivery_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+      .day{
+        width: 70%;
+      }
+    }
+    .item_area{
+      height: 120px;
+      .area_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+    .item_day{
+      height: 120px;
+      .day_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+    .item_post{
+      height: 120px;
+      .post_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        margin-bottom: 20px;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+    .item_price{
+      height: 120px;
+      .price_headline{
+        display: flex;
+        height: 20px;
+        width: 200px;
+        display: flex;
+        font-weight: bold;
+        .name{
+          font-size: 15px;
+        }
+        .name_red{
+          width: 40px;
+          height: 20px;
+          font-size: 13px;
+          color: red;
+          text-align: center;
+        }
+      }
+      .price_box{
+        height: 50px;
+        margin-top: 30px;
+        .price-input{
+          height: 30px;
+          width: 50%;
+          margin-left: 150px;
+        }
+        .price_text{
+          font-size: 10px;
+          margin-top: 10px;
+          margin-left: 400px;
+        }
+      }
+    }
+    .item_listing{
+      height: 80px;
+      padding: 30px 200px;
+      margin: auto;
+      .listing_btn{
+        height: 50px;
+        width: 300px;
+        color: white;
+        background-color: red;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+      }
+    }
+  }
+}
