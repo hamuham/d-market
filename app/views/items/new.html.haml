@@ -1,3 +1,159 @@
-
-.update
-  = render partial: 'form'
+.home-main
+  .header_contents
+    .header_logo
+      = image_tag "logo.png", size: "140x40"
+    .header-seach
+      = form_with do |form| 
+        = form.text_field :keyword, placeholder: "キーワードから探す", class: "search-input"
+        = link_to "#", class: "serch-btn" do
+          = image_tag "icon-search.png", size: "18x18"
+.item_main
+  .item_box
+    .item_image
+      .image_headline 
+        .image_title
+          出品画像
+        .image_red
+          [必須]
+      .image_up
+        .update_item
+    最大5枚まで可能です。
+    = form_for @item do |f|
+      #img-box
+        #previews
+          - if @item.persisted? 
+            - @item.images.each_with_index do |image, i|
+              = image_tag @item.items_img.url, data: { index: i }, width: "100", height: '100'
+        = f.fields_for :items_img do |i|
+          .js-file_group{data: {index: "items_img.index"}}
+            = i.file_field :url, class: "js-file" do
+              %span.js-remove
+                = f.submit "削除"
+    .item_title
+      .name_headline
+        .name
+          商品名
+          .name_red
+            [必須]
+      .title_box
+        = form_for @item do |f| 
+          = f.text_field :name, placeholder: "入力してください", class: "name-input"
+    .item_description
+      .description_headline
+        .name
+          商品の説明
+          .name_red
+            [必須]
+      .description
+        = form_for @item do |f| 
+          = f.text_area :introduction, placeholder: "入力してください", class: "description-input"
+    .item_category
+      .category_headline
+        .name
+          カテゴリー
+          .name_red
+            [必須]
+      .category
+        = form_with do |form|
+          = form.select :status, [["日用品","1"],["化粧品","２"],["家電","３"]], prompt: "選択してください", class: "satatus"
+    .item_brand
+      = form_for @item do |f|
+        = f.fields_for :brand do |brand|
+          = brand.label "ブランド"
+          .form-gray
+            [任意]
+          %div
+            = brand.text_field :name, placeholder: "例）シャネル", value: "", class: "input-default"
+    .item_status
+      .status_headline
+        .name
+          商品の状態
+          .name_red
+            [必須]
+      .status
+        = form_for @item do |f|
+          = f.collection_select :item_condition_id, ItemCondition.all, :id, :item_condition, prompt: "選択してください", class: "satatus"
+    .item_delivery
+      .delivery_headline
+        .name
+          配送料の負担
+          .name_red
+            [必須]
+      .delivery
+        = form_for @item do |f|
+          = f.collection_select :postage_payer_id, PostagePayer.all, :id, :postage_payer, prompt: "選択してください", class: "money"
+    .item_area
+      .area_headline
+        .name
+          発送元の地域
+          .name_red
+            [必須]
+      .area
+        = form_for @item do |f|
+          = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "選択してください"
+    .item_day
+      .day_headline
+        .name
+          発送までの日数
+          .name_red
+            [必須]
+      .day
+        = form_for @item do |f|
+          = f.collection_select :preparation_day_id, PreparationDay.all, :id, :preparation_day, prompt: "選択してください", class: "day"
+    .item_post
+      .post_headline
+        .name
+          販売価格
+          .name_red
+            [必須]
+      .post_box
+        = form_for @item do |f|
+          = f.collection_select :postage_type_id, PostageType.all, :id, :postage_type, prompt: "選択してください"
+    .item_price
+      .price_headline
+        .name
+          販売価格
+          .name_red
+            [必須]
+      .price_box
+        .price
+          = form_for @item do |f|
+            = f.number_field :price, placeholder: "0", class: "price-input"
+    .item_listing
+      .listing_btn
+        出品する
+.form
+  .form-to
+    .form-list
+      .form-title
+        .title
+          FURIMAについて
+        %li.list
+          会社概要（運営会社）
+        %li.list
+          プライバシーポリシー
+        %li.list
+          FURIMA利用規約
+        %li.list
+          ポイントに関する特約
+      .form-title
+        .title
+          FURIMAを見る
+        %li.list
+          カテゴリー一覧
+        %li.list
+          ブランド一覧
+      .form-title
+        .title
+          ヘルプ＆ガイド
+        %li.list
+          FURIMAガイド
+        %li.list
+          FURIMAロゴ利用オンライン
+        %li.list
+          お知らせ
+    .form-logo
+      .logo
+        = image_tag "logo-white.png", size: "150x35"
+      .logo-text
+        FURIMA
