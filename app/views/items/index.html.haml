@@ -115,7 +115,7 @@
       - @items.each do |item|
         = link_to items_path do
           .item-pic1
-            = image_tag item.items_imgs[0].url, alt: "image_url",size: "100x130", class:"item-image"
+            = image_tag item.items_imgs[0].url, alt: "image_url", class:"item-image"
             .item-image-text
               .item-name
                 = item.name
