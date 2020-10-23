@@ -2,11 +2,12 @@ class ItemsController < ApplicationController
 
 
   def index
-    @item = Item.includes(:items_img).order('created_at DESC')
+    @items = Item.includes(:items_img).order('created_at DESC')
   end
 
   def show
-    @items = Item.find(params[:id])
+    @items = Item.fined(params[:id])
+    @items = Item.includes(:items_imag).find(params[:id])
   end
 
   def new
