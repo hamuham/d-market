@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
 
   def index
-    @items = Item.includes(:items_img).order('created_at DESC')
+    @items = Item.includes(:items_imgs).order('created_at DESC').limit(3)
   end
 
   def show
@@ -45,5 +45,11 @@ class ItemsController < ApplicationController
       brand_attributes: [:id, :name],
       items_img_attributes: [:url, :id]
     ).merge(seller_id: current_user.id)
+  end
+
+
+  def purchase
+    @buyer_id = Item.find(params[:id])
+    @user_id = Item.find(params[:id])
   end
 end
