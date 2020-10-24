@@ -6,8 +6,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @items = Item.fined(params[:id])
-    @items = Item.includes(:items_imag).find(params[:id])
+    @item = Item.find(params[:id])
+    @item = Item.includes(:items_imag).find(params[:id])
   end
 
   def new
@@ -45,11 +45,5 @@ class ItemsController < ApplicationController
       brand_attributes: [:id, :name],
       items_img_attributes: [:url, :id]
     ).merge(seller_id: current_user.id)
-  end
-
-
-  def purchase
-    @buyer_id = Item.find(params[:id])
-    @user_id = Item.find(params[:id])
   end
 end
