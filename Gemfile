@@ -81,4 +81,3 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
-
