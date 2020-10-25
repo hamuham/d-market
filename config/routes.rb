@@ -13,8 +13,10 @@ Rails.application.routes.draw do
 
   root 'items#index'
 
-  resources :items, only: [:index, :new, :create]
-
+  resources :items, only: [:index, :new, :create]do
+    get 'category/get_category_children', to: 'items#get_category_children', defaults: { format: 'json' }
+    get 'category/get_category_grandchildren', to: 'items#get_category_grandchildren', defaults: { format: 'json' }
+    end
   resources :users, only: [:show, :edit, :update]do
     member do
       get 'profile'
@@ -23,8 +25,6 @@ Rails.application.routes.draw do
     end
     collection do
       get 'ready'
-      get 'category/get_category_children', to: 'items#get_category_children', defaults: { format: 'json' }
-    get 'category/get_category_grandchildren', to: 'items#get_category_grandchildren', defaults: { format: 'json' }
     end
   end
   namespace :items do

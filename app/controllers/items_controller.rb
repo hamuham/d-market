@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only:[:show, :destroy, :edit, :update, :purchase, :payment]
 
 
   def index
@@ -11,7 +12,6 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @item.items_img.new
     @item.build_brand
     @category_parent_array = ["---"]
     @category_parent_array = Category.where(ancestry: nil)
