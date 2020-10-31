@@ -49,7 +49,7 @@
 .title-pic{
   height: 550px;
   width: 100%;
-  background-image:url("mainVisual.jpg");
+  background-image: image-url("mainVisual.jpg");
   background-size:cover;
   color: white;
   text-shadow: 0 0 5px rgba(0,0,0,0.6);
@@ -95,7 +95,7 @@
       .pic-1{
         height: 300px;
         align-items: center;
-        background-image:url("pic1.jpg");
+        background-image: image-url("pic1.jpg");
         background-image: 270px 300px;
         background-size: cover;
       }
@@ -123,7 +123,7 @@
         height: 300px;
         width: 300px;
         margin-left: 100px;
-        background-image:url("pic2.jpg");
+        background-image: image-url("pic2.jpg");
         background-size:270px 300px;
         background-size: cover;
       }
@@ -158,7 +158,7 @@
       height: 300px;
       margin-left: 100px;
       width: 270px;
-      background-image:url("pic3.jpg");
+      background-image: image-url("pic3.jpg");
       background-size:270px 300px;
     }
     .pic-text{
@@ -190,7 +190,7 @@
   }
  }
 .middle_pic{
-  background-image:url("middle-pic.jpg");
+  background-image: image-url("middle-pic.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -273,59 +273,7 @@
       padding: 40px 20px;
       justify-content: space-evenly;
       text-align: center;
-      .item-pic1{
-        background-color: white;
-        .item-image{
-          margin: 20px auto;
-          height: 200px;
-          width: 300px;
-          object-fit: cover;
-          margin: 20px auto;
-        }
-        .item-image-text{
-          font-size: 16px;
-          text-align: left;
-          height: 200px;
-          padding: 10px;
-          .item-price{
-            display: flex;
-            margin-top: 10px;
-            .item-fav{
-              margin-left: 200px;
-            }
-          }
-          .item-sale-tex{
-            font-size: 3px;
-          }
-        }
-      }
-      .item-pic2{
-        background-color: white;
-        .item-image{
-          margin: 20px auto;
-          height: 200px;
-          width: 300px;
-          object-fit: cover;
-          margin: 20px auto;
-        }
-        .item-image-text{
-          font-size: 16px;
-          text-align: left;
-          height: 200px;
-          padding: 10px;
-          .item-price{
-            display: flex;
-            margin-top: 10px;
-            .item-fav{
-              margin-left: 200px;
-            }
-          }
-          .item-sale-tex{
-            font-size: 3px;
-          }
-       }
-      }
-      .item-pic3{
+      .item-pic{
         background-color: white;
         .item-image{
           margin: 20px auto;
@@ -370,7 +318,7 @@
   }
 }
 .form-pic{
-  background-image:url("form-pic.jpg");
+  background-image: image-url("form-pic.jpg");
   background-size: 1500px 600px;
   background-repeat: no-repeat;
   background-size: cover;
